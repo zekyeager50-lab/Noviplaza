@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Finals E-Portfolio</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#000000;
+      color:white;
+      padding:20px;
+    }
+
+    .container{
+      max-width:1200px;
+      margin:auto;
+    }
+
+    
+
+    .hero{
+      background:#42120A;
+      border-radius:20px;
+      padding:40px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-bottom:20px;
+    }
+
+    .hero-text h4{
+      color:#c8ff5c;
+      margin-bottom:10px;
+    }
+
+    .hero-text h1{
+      font-size:60px;
+      margin-bottom:10px;
+    }
+
+    .hero-text p{
+      color:#ccc;
+      margin-bottom:20px;
+    }
+
+    button{
+      padding:12px 20px;
+      border:none;
+      border-radius:30px;
+      background:#0DFCED;
+      font-weight:bold;
+      cursor:pointer;
+      margin-right:10px;
+    }
+
+    .outline{
+      background:transparent;
+      border:2px solid #c8ff5c;
+      color:#c8ff5c;
+    }
+
+    
+
+    .profile{
+      width:120px;
+      height:120px;
+      border-radius:50%;
+      overflow:hidden;
+      border:4px solid #000000;
+    }
+
+    .profile img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    
+
+    .intro{
+      background:#42120A;
+      padding:15px;
+      border-radius:15px;
+      margin-bottom:20px;
+      color:#ddd;
+    }
+
+    
+
+    .grid{
+      display:grid;
+      grid-template-columns:1fr 2fr;
+      gap:20px;
+    }
+
+    .card{
+      background:#42120A;
+      padding:25px;
+      border-radius:20px;
+      margin-bottom:20px;
+    }
+
+    .card h2{
+      margin-bottom:15px;
+      color:#fff;
+    }
+
+    .card ul li{
+      margin-bottom:10px;
+      color:#42120;
+    }
+
+    
+
+    input{
+      width:70%;
+      padding:10px;
+      border:none;
+      border-radius:10px;
+      margin-top:10px;
+    }
+
+    #result{
+      margin-top:15px;
+      font-weight:bold;
+    }
+
+    
+
+    .projects{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+      gap:15px;
+    }
+
+    .project-box{
+      background:#42120A;
+      padding:15px;
+      border-radius:15px;
+    }
+
+    .project-box h3{
+      margin-bottom:10px;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:768px){
+
+      .hero{
+        flex-direction:column;
+        text-align:center;
+      }
+
+      .profile{
+        margin-top:20px;
+      }
+
+      .grid{
+        grid-template-columns:1fr;
+      }
+
+      .hero-text h1{
+        font-size:40px;
+      }
+
+    }
+
+  </style>
+
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+      <div class="hero-text">
+
+        <h4>Information and Communication Technology• 2ND YEAR</h4>
+
+        <h1>Thanks for visiting!</h1>
+
+        <p>"Curiosity makes us want to learn more."</p>
+
+        <button>Say Hello</button>
+
+        <button class="outline">Open to Internship</button>
+
+      </div>
+
+      
+
+      <div class="profile">
+
+        <img src="Novi.jpg" alt="Profile Picture">
+
+      </div>
+
+    </section>
+
+    
+
+    <section class="intro">
+
+      <p>
+        Hello! I'm Novi Plaza, a 2nd Year College Student at Colegio De La Ciudad De Zamboanga with a deep love for building things on the web.
+      </p>
+
+    </section>
+
+    
+
+    <section class="grid">
+
+      
+
+      <div>
+
+        <div class="card">
+
+          <h2>Skills</h2>
+
+          <ul>
+            <li>HTML</li>
+            <li>CSS3</li>
+            <li>JavaScript Basics</li>
+            <li>Video Editing</li>
+          </ul>
+
+        </div>
+
+        <div class="card">
+
+          <h2>Hobbies</h2>
+
+          <ul>
+            <li>Watching movie</li>
+            <li>Gaming</li>
+            <li>Cooking</li>
+            <li>Music</li>
+          </ul>
+
+        </div>
+
+        <div class="card">
+
+          <h2>Contact</h2>
+
+          <p>Email: Noviplaza143@gmail.com</p>
+          <br>
+
+          <p>Location: Philippines Zamboanga City</p>
+          <br>
+
+          <p>GitHub: github.com/Novi</p>
+
+        </div>
+
+      </div>
+
+      <!-- RIGHT SIDE -->
+
+      <div>
+
+        <div class="card">
+
+          <h2>About Me</h2>
+
+          <p>
+            Hello! I'm Novi, a 2nd year BTLED ICT Student who loves creating websites and learning programming.
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <h2>Education</h2>
+
+          <p><strong>BTLED ICT</strong></p>
+
+          <p>2025 - 2026</p>
+
+        </div>
+
+        <div class="card">
+
+          <h2>Grade Checker</h2>
+
+          <input type="number" id="gradeInput" placeholder="Enter Grade">
+
+          <button onclick="checkGrade()">Check</button>
+
+          <p id="result"></p>
+
+        </div>
+
+        <div class="card">
+
+          <h2>Projects</h2>
+
+          <div class="projects">
+
+            <div class="project-box">
+
+              <h3>Portfolio Website</h3>
+
+              <p>Simple personal portfolio using HTML and CSS.</p>
+
+            </div>
+
+            <div class="project-box">
+
+              <h3>Budget Tracker</h3>
+
+              <p>Track income and expenses using JavaScript.</p>
+
+            </div>
+
+            <div class="project-box">
+
+              <h3>Quiz App</h3>
+
+              <p>Basic HTML quiz application.</p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </div>
+
+  <script>
+
+    function checkGrade(){
+
+      let grade = document.getElementById("gradeInput").value;
+
+      let result = document.getElementById("result");
+
+      if(grade >= 75){
+
+        result.innerHTML = "✅ Passed! Your grade is " + grade;
+
+      }
+
+      else{
+
+        result.innerHTML = "❌ Failed! Your grade is " + grade;
+
+      }
+
+    }
+
+  </script>
+
+</body>
+</html>
